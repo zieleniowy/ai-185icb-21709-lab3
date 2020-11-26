@@ -1,0 +1,17 @@
+doctype html
+include head.pug
+body
+ div.container
+  include alert.pug
+  if user
+   p zalogowano jako #{user.email}.
+   div(role="group" aria-label="Basic example").btn-group
+    button(data-toggle="modal" data-target="#exampleModal").btn.btn-primary zmień hasło
+    a(href="/logout").btn.btn-primary wyloguj
+   include passChangeModal.pug
+  else
+   p 
+    | jestes niezalogowany, 
+    a(href="/login") zaloguj się
+  
+ include scripts.pug
