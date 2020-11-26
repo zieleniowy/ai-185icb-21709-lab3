@@ -16,3 +16,5 @@ aby ją uruchomić, należy stworzyć w głównym folderze plik .env ze zmiennym
 - HASH_ROUNDS
 - RESET_TOKEN_TIME
 - JWT_SECRET
+
+w zmiennej RESET_TOKEN_TIME, czas należy podać w sekundach
