@@ -1,6 +1,6 @@
 ## logowanie-rejestracja na zaliczenie laboratoriów z tworzenia aplikacji internetowych na amw - 185icb - 21709
 
-aplikacja uruchomiona na heroku pod [tym](https://lab1-185icb-21709-ai.herokuapp.com/login) adresem 
+aplikacja uruchomiona na heroku pod [tym](https://lab1-185icb-21709-ai.herokuapp.com/) adresem 
 
 aby ją uruchomić, należy stworzyć w głównym folderze plik .env ze zmiennymi konfiguracyjnymi (lub dodać je przez panel konfiguracyjny, jeśli aplikacja instalowana jest np. na heroku). Ze względów bezpieczeństwa plik .env dodany jest do .gitignore.  
 ### lista zmiennych
