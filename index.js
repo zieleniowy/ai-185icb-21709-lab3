@@ -43,7 +43,7 @@ app.post('/login', passport.authenticate('local', { failureRedirect: '/login?msg
 app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email'] }));
 
 app.get('/auth/facebook/callback',
-  passport.authenticate('facebook', { failureRedirect:  process.env.FAILURE_REDIRECT }),
+  passport.authenticate('facebook', { failureRedirect: '/login' }),
   function(req, res) {
     // Successful authentication, redirect home.
     res.redirect('/');
@@ -55,8 +55,8 @@ app.get('/auth/facebook/callback',
 
 app.get( '/auth/google/callback',
    passport.authenticate( 'google', {
-       successRedirect: process.env.GOOGLE_REDIRECT,
-       failureRedirect: process.env.FAILURE_REDIRECT,
+       successRedirect: '/',
+       failureRedirect: '/login',
        scope: [ 'email', 'profile' ]
 }));
 
