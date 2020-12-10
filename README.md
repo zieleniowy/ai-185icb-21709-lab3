@@ -16,5 +16,8 @@ aby uruchomić ją samodzielnie, należy stworzyć w głównym folderze plik .en
 - HASH_ROUNDS
 - RESET_TOKEN_TIME
 - JWT_SECRET
-
+- FACEBOOK_APP_ID
+- FACEBOOK_APP_SECRET
+- GOOGLE_CLIENT_ID
+- GOOGLE_CLIENT_SECRET
 w zmiennej RESET_TOKEN_TIME, czas należy podać w sekundach

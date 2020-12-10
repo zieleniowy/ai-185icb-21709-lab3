@@ -39,6 +39,27 @@ app.post('/login', passport.authenticate('local', { failureRedirect: '/login?msg
   function(req, res) {
     res.redirect('/');
 });
+
+app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email'] }));
+
+app.get('/auth/facebook/callback',
+  passport.authenticate('facebook', { failureRedirect: '/login' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/');
+});
+
+ app.get('/auth/google',
+ passport.authenticate('google', { scope: [ 'email', 'profile' ] }
+));
+
+app.get( '/auth/google/callback',
+   passport.authenticate( 'google', {
+       successRedirect: '/',
+       failureRedirect: '/login',
+       scope: [ 'email', 'profile' ]
+}));
+
 app.post('/register', (req, res, next)=>{
     if(req.body.password !==req.body.password2) return res.redirect('/login?msg=1')
     auth.hash(req.body.password)
